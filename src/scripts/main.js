@@ -354,7 +354,7 @@ const people = [
   },
 ];
 
-const table = document.querySelector('table');
+const table = document.querySelector('.dashboard');
 
 for (let i = 0; i < people.length; i++) {
   const tr = document.createElement('tr');
@@ -369,8 +369,8 @@ for (let i = 0; i < people.length; i++) {
   th2.textContent = people[i].sex;
   th3.textContent = people[i].born;
   th4.textContent = people[i].died;
-  th5.textContent = people[i].died - people[0].born;
-  th6.textContent = Math.ceil(people[i].born / 100);
+  th5.textContent = people[i].died - people[i].born;
+  th6.textContent = Math.ceil(people[i].died / 100);
 
   table.appendChild(tr);
   tr.insertAdjacentElement('afterbegin', th1);
